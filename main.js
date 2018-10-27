@@ -1,10 +1,15 @@
-const removeTask = (e) => {
-  //console.log(event.target.textContent); //przechwycenie tego co klikneliśmy może być this ale musi być function
-  // e.target.remove();
-  // e.target.parentNode.remove();//przechwytuje i usuwa rodzica 
-  const index = e.target.dataset.key; //przypisanie naciśniętego data w HTML w tym przypadku z nazwą key
+const form = document.querySelector('form');
+const ul = document.querySelector('ul');
+const h1 = document.querySelector('h1 span');
+const input = document.querySelector('input');
 
-  document.querySelector(`li[data-key='${index}']`).remove(); //pobranie selektora li[data-key='${index}'] z odpowiednim indexem i usunięcie go;
-
+const addTask = (e) => {
+  e.preventDefault();
+  let textTask = input.value;
+  if (textTask === "") return;
+  input.value = '';
+  let task = document.createElement('li');
+  ul.appendChild(task).textContent = textTask;
 }
-document.querySelectorAll('button[data-key]').forEach(item => item.addEventListener('click', removeTask));
+
+form.addEventListener('submit', addTask);

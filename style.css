@@ -25,3 +25,12 @@ input[type="text"] {
 h1 {
   margin: 10px 30px;
 }
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  font-size: 22px;
+  font-family: Arial, Helvetica, sans-serif;
+}
