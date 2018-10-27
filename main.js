@@ -1,4 +1,4 @@
-const listTask = [];
+const toDoList = [];
 
 const form = document.querySelector('form');
 const ul = document.querySelector('ul');
@@ -19,8 +19,13 @@ const addTask = (e) => {
   let task = document.createElement('li');
   task.className = 'task';
   task.innerHTML = textTask + "<button> Usuń</button>";
-  listTask.push(task);
+  toDoList.push(task);
+  ul.textContent = '';
+  toDoList.forEach((toDoElement, index) => {
+    toDoElement.dataset.key = index;
+    ul.appendChild(toDoElement);
 
+  })
   ul.appendChild(task);
   taskNumber.textContent = listItems.length;
   task.querySelector('button').addEventListener('click', removeTask);
