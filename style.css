@@ -33,4 +33,16 @@ ul {
 li {
   font-size: 22px;
   font-family: Arial, Helvetica, sans-serif;
+  padding: 10px 50px;
+}
+
+.task button {
+  font-size: 22px;
+  padding: 3px 20px;
+  margin: 0 30px;
+  border-radius: 50px;
+  background: cadetblue;
+  border: 1px solid rgb(105, 165, 165);
+  cursor: pointer;
+  font-family: Arial, Helvetica, sans-serif;
 }

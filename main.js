@@ -9,7 +9,10 @@ const addTask = (e) => {
   if (textTask === "") return;
   input.value = '';
   let task = document.createElement('li');
-  ul.appendChild(task).textContent = textTask;
+  task.className = 'task';
+  task.innerHTML = textTask + "<button> Usuń</button>";
+  ul.appendChild(task);
+
 }
 
 form.addEventListener('submit', addTask);
